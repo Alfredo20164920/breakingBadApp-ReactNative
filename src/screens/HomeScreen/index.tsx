@@ -1,11 +1,9 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import TopNavigator from '../../navigators/TopNavigator';
 
 const Component = () => {
     return (
-        <View>
-            <Text>HomeScreen</Text>
-        </View>
+        <TopNavigator/>
     )
 }
 
