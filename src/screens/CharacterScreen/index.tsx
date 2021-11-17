@@ -1,10 +1,15 @@
+import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import React, { useEffect, useState } from 'react'
 import { ScrollView, Text, View } from 'react-native'
 import breakinBadApi from '../../api/breakingBadApi'
 import CharacterCard from '../../components/CharacterCard'
 import { CharacterInterface } from '../../interfaces/interfaces'
 
-const Component = () => {
+interface Props extends NativeStackScreenProps<any, any>{}
+
+const Component = (props: Props) => {
+
+    const {navigation} = props;
 
     const [characters, setCharacters] = useState< [CharacterInterface] | null >(
         null,
@@ -22,7 +27,7 @@ const Component = () => {
     }, []);
 
     const onSelectCharacter = (character: CharacterInterface) => {
-        console.log(character.name);
+        navigation.navigate('CharacterProfile', character);
     }
 
     const renderCharacters = characters?.map((character, index, ) => {
