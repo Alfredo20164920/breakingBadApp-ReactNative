@@ -6,7 +6,10 @@ export const colors = {
     secondary: '#d7370',
     blue: '#06BEE1',
     red: '#f02849',
-    purple: '#8a079e',
+    purple: '#3626A7',
+    gray_797: '#797B84',
+    black: '#000',
+    black_0A0: '#0A090C'
 }
 export const baseStyle = StyleSheet.create({
     Title: {

@@ -21,8 +21,16 @@ const Component = () => {
         getCharacters()
     }, []);
 
+    const onSelectCharacter = (character: CharacterInterface) => {
+        console.log(character.name);
+    }
+
     const renderCharacters = characters?.map((character, index, ) => {
-        return <CharacterCard key={`character-${index}`} character={character}/>
+        return <CharacterCard 
+            key={`character-${index}`} 
+            character={character}
+            onClick={onSelectCharacter}
+            />
     })
 
     return (
