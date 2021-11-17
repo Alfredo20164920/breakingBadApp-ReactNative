@@ -1,24 +1,34 @@
-import React, { useEffect } from 'react'
-import { Text, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { ScrollView, Text, View } from 'react-native'
 import breakinBadApi from '../../api/breakingBadApi'
+import CharacterCard from '../../components/CharacterCard'
+import { CharacterInterface } from '../../interfaces/interfaces'
 
 const Component = () => {
 
+    const [characters, setCharacters] = useState< [CharacterInterface] | null >(
+        null,
+    );
+
     const getCharacters = async() => {
-
-        const response = await breakinBadApi.get('/characters')
-
-        console.log(response.data);
+        const { data } = await breakinBadApi.get<[CharacterInterface]>(
+            '/characters'
+        );
+        setCharacters(data);
     }
 
     useEffect(() => {
         getCharacters()
-    }, [])
+    }, []);
+
+    const renderCharacters = characters?.map((character, index, ) => {
+        return <CharacterCard key={`character-${index}`} character={character}/>
+    })
 
     return (
-        <View>
-            <Text> Character Screen </Text>
-        </View>
+        <ScrollView>
+            {renderCharacters}
+        </ScrollView>
     )
 }
 

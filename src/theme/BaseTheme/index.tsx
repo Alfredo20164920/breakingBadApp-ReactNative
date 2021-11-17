@@ -1,9 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export const colors = {
-    primary: '#282C34',
     white: '#fff',
-    blue: '#06BEE1'
+    primary: '#282C34',
+    secondary: '#d7370',
+    blue: '#06BEE1',
+    red: '#f02849',
+    purple: '#8a079e',
 }
 export const baseStyle = StyleSheet.create({
     Title: {
