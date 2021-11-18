@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import React, { useEffect, useState } from 'react'
-import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import React, { useEffect } from 'react'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { useForm } from '../../hooks/useForm'
 import { LoginInterfece } from '../../interfaces/interfaces'
 
