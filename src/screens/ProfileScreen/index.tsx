@@ -30,7 +30,7 @@ const Component = (props: Props) => {
         {key: `Performed by: ${portrayed}`}
     ]
 
-    console.log(name);
+    console.log(status);
 
     return (
         <SafeAreaView style={styles.Container}>
