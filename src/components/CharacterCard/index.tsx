@@ -1,3 +1,4 @@
+import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { Icon } from 'react-native-elements'
 import { CharacterInterface } from '../../interfaces/interfaces'
