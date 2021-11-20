@@ -13,3 +13,10 @@ export interface CharacterInterface{
     nickname: string,
     portrayed: string,
 }
+
+export interface PhraseInterface{
+    id: string,
+    quote: string,
+    author: string,
+    series: string
+}
